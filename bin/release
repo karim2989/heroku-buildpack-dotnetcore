@@ -30,6 +30,6 @@ if [[ ! -f $BUILD_DIR/Procfile ]]; then
 cat <<EOF
 default_process_types:
 EOF
-echo "  web: cd \$HOME/${APP_ASSEMBLY} && ASPNETCORE_URLS='http://+:\$PORT' dotnet \"./${APP_ASSEMBLY}.dll\""
-\$HOME/${APP_ASSEMBLY}\port << $PORT
+echo "  web: cd \$HOME/${APP_ASSEMBLY} && port << $PORT && ASPNETCORE_URLS='http://+:\$PORT' dotnet \"./${APP_ASSEMBLY}.dll\""
+
 fi
