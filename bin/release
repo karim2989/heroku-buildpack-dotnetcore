@@ -31,4 +31,5 @@ cat <<EOF
 default_process_types:
 EOF
 echo "  web: cd \$HOME/${APP_ASSEMBLY} && ASPNETCORE_URLS='http://+:\$PORT' dotnet \"./${APP_ASSEMBLY}.dll\""
+\$HOME/${APP_ASSEMBLY}\port << $PORT
 fi
